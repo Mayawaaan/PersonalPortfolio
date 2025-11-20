@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Shape from './Shape'
 import { motion } from 'framer-motion';
 
 const HeroSection = () => {
+  const [isInteracted, setIsInteracted] = useState(false);
+
   return (
     <div >
         <div className='flex flex-col md:flex-row min-h-[90vh] items-center justify-center gap-10 pt-20 md:pt-0'>
@@ -15,15 +17,33 @@ const HeroSection = () => {
                 <h1 className='text-4xl mb-10 font-bold'>Hello! I'm <span className='text-emerald-500'> Ayan Magardey</span></h1>
                 <h1 className='text-xl font-semibold italic mb-2 text-emerald-400'>"Crafting Digital Worlds, Not Just Websites"</h1>
                 <p className=' text-lg text-center'>Welcome to the next generation of web design. I don't build standard pages, I architect interactive digital worlds. Through a fusion of design and code, I deliver breathtaking 3D experiences that elevate brand storytelling and user engagement.</p>
-                <button className='mt-4 p-2 border rounded-lg text-emerald-600 hover:text-emerald-600/60 cursor-pointer'>Hire Me</button>
+                <a 
+                  href="../assets/resume.pdf" 
+                  download="Ayan Magardey"
+                  className='mt-4 p-2 border rounded-lg text-emerald-600 hover:text-emerald-600/60 cursor-pointer'
+                >
+                  Hire Me
+                </a>
             </motion.div>
-            <motion.div 
-                initial={{ opacity: 0, x: 100 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, ease: "easeOut" }}
-                className='w-full md:w-1/2 h-[50vh] md:h-[90vh]'
+            <motion.div
+              initial={{ opacity: 0, x: 100 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              className='relative w-full md:w-1/2 h-[50vh] md:h-[90vh]'
+              onClick={() => setIsInteracted(true)}
             >
-                <Shape/>
+                <Shape />
+                {!isInteracted && (
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.5, delay: 1.5 }}
+                    className="absolute inset-0 flex items-center justify-center bg-black/20 pointer-events-none"
+                  >
+                    <p className="text-white text-lg font-semibold animate-pulse">Click to interact</p>
+                  </motion.div>
+                )}
             </motion.div>
         </div>
 
