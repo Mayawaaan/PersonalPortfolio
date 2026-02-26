@@ -31,7 +31,7 @@ const Contact = () => {
         }
       }
     } catch (error) {
-      toast.error('An error occurred. Please try again.');
+      toast.error('An error occurred. Please try again.',error);
     } finally {
       setIsSubmitting(false);
     }
