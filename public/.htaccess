@@ -11,7 +11,7 @@ RewriteRule ^(.*)$ https://ayanmagardey.in/$1 [L,R=301]
 # ----------------------------------------------------------------------
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}\.html -f
-RewriteRule ^([^\.]+)$ $1.html [NC,L]
+RewriteRule ^([^.]+)$ $1.html [NC,L]
 
 # ----------------------------------------------------------------------
 # 3. PERFORMANCE: Gzip Compression

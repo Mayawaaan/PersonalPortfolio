@@ -2,7 +2,7 @@ import project1 from '../assets/project/StoreApp.png';
 import project2 from '../assets/project/Lambo.png';
 import project3 from '../assets/project/planets.png';
 import project4 from '../assets/project/blobmix.png';
-import project5 from '../assets/project/planets.png';
+import project5 from '../assets/project/CryptoArt.png';
 
 const projectsData = [
   {
