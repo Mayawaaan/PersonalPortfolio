@@ -2,6 +2,7 @@ import project1 from '../assets/project/StoreApp.png';
 import project2 from '../assets/project/Lambo.png';
 import project3 from '../assets/project/planets.png';
 import project4 from '../assets/project/blobmix.png';
+import project5 from '../assets/project/planets.png';
 
 const projectsData = [
   {
@@ -40,6 +41,23 @@ const projectsData = [
     image: project4,
     link: 'https://blobmix.vercel.app/',
   },
+  {
+  id: 5,
+  title: 'CryptoArt – 3D WebGL Landing Experience',
+  description: 'An immersive 3D crypto art landing page built with Three.js and React Three Fiber, featuring interactive WebGL scenes and smooth animations.',
+  longDescription: 'CryptoArt is a high-performance 3D WebGL landing page designed to showcase digital collectibles in an interactive and visually immersive environment. The project leverages Three.js with React Three Fiber to render optimized 3D scenes directly in the browser. Framer Motion is used for UI transitions, while Zustand manages global state efficiently. The architecture focuses on component modularity, GPU-friendly rendering, performance optimization (lazy loading, texture compression), and fully responsive layout design. The result is a seamless cross-device 3D web experience blending Web3 aesthetics with modern frontend engineering.',
+  technologies: [
+    'React',
+    'Three.js',
+    'React Three Fiber',
+    'WebGL',
+    'Tailwind CSS',
+    'Framer Motion',
+    'Zustand'
+  ],
+  image: project5,
+  link: 'https://crypto-art-pied.vercel.app/',
+}
 ];
 
 export default projectsData;
